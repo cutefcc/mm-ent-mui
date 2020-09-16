@@ -1,0 +1,39 @@
+:root {
+  --right-con-bg-color: #f0f0f0;
+  --markdown-con-bg-color: #f0f0f0;
+}
+.markdownCon {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  overflow: auto;
+  background-color: var(--markdown-con-bg-color);
+}
+.rightCon {
+  height: 100%;
+  flex-grow: 1;
+  background-color: var(--right-con-bg-color);
+  padding: 16px;
+  // padding-bottom: 42px;
+  overflow: auto;
+  min-width: 1100px;
+  // margin-bottom: 42px;
+}
+.inputArea {
+  // padding: 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid #e0e0e0;
+  padding-bottom: 20px;
+  .inputAreaItem {
+    padding: 20px;
+    padding-bottom: 0px;
+  }
+}
+.textAreaDiv {
+  textarea {
+    resize: none;
+  }
+}

@@ -1,0 +1,64 @@
+.paginationCon {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 16px;
+}
+.pagesItem {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #FFFFFF;
+    color: rgba(0,0,0,0.65);
+    border-radius: 6px;
+    margin-right: 8px;
+    cursor: pointer;
+    border: 1px solid #EEEEEE;
+}
+.pagesItem:hover {
+    background-color: #266FFF;
+    border: 1px solid #266FFF;
+    color: #fff;
+}
+.current {
+    background-color: #266FFF;
+    border: 1px solid #266FFF;
+    color: #fff;
+}
+.prePage, .nextPage {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.prePage {
+    transform: matrix(0,1,-1,0,0,0)
+}
+.nextPage {
+    transform: matrix(0,-1,1,0,0,0)
+}
+.prePage:hover, .nextPage:hover {
+    background-color: #266FFF;
+    border: 1px solid #266FFF;
+    color: #fff;
+}
+.disabled {
+    background: #F5F5F5;
+    border: 1px solid #EEEEEE;
+    color: #C9CED9;
+}
+.disabled:hover{
+    background: #F5F5F5;
+    border: 1px solid #EEEEEE;
+    color: #C9CED9;
+    cursor: default;
+}
+
+.prePage {
+    margin-right: 10px;
+}
