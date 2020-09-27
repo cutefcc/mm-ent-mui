@@ -16,6 +16,8 @@ let webpackConfig = {
   watch: !_modeflag,
   devServer: {
     hot: true,
+    contentBase: './dist',
+    historyApiFallback: true,
   },
   module: {
     rules: [

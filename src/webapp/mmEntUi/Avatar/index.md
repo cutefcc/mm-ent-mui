@@ -4,7 +4,7 @@ imports:
   '{Badge}': 'antd'
 ---
 ## 何时使用
-展示头像，或者公司logo的时候
+展示头像，或者公司logo的时候5678
 
 ## 引用方式
 ```render javascript

@@ -7,7 +7,7 @@
 问题记录：
 
 - BrowserRouter 在非 index 页面 （比如二级三级路由）刷新页面或者直接访问 404
-  - 解决办法 1: 换成 HashRouter hash 模式对 seo 不够友好，是不推荐这种方式的
+  - 解决办法 1: 换成 HashRouter, 但是 hash 模式对 seo 不够友好，并且有一个 `#`(不好看), 不推荐这种方式
   - 解决办法 2: 设置 koa2-connect-history-api-fallback 白名单 配合 webpack 的配置文件 filename 和 publicPath
 - html-webpack-plugin title 属性直接配置 不生效？？？
   - 解决办法： `<title><%= htmlWebpackPlugin.options.title %></title>`
@@ -41,3 +41,25 @@
 - 组件可以这样引用
   - import Avatar from "mm-ent-ui/Avatar";
   - import { MUIButton } from "mm-ent-ui";
+
+- 命令介绍：
+    // 启动服务，如果使用pm2的话：pm2 start npm --name 'mmEntMui' -- run dev --watch
+    // 上面的watch是 变化后会立马生效（这里还是需要刷新浏览器的）
+    "dev": "tsnd --respawn ./app.ts",
+    // development 下打包前端代码
+    "client:dev": "node ./scripts/client/dev.js",
+    // production 下打包前端代码
+    "client:prod": "node ./scripts/client/prod.js",
+    // 监控md文件变化，转换为jsx
+    "client:trans": "node ./scripts/client/trans.js",
+    // webpack-dev-server
+    "start": "webpack-dev-server --open",
+- webpack-dev-server 解决了 在recruit-fe中启动文档热更新慢的问题（80s）-----> (2s)
+- webpack-dev-server --open 刷新页面时（或者在hmr时）会遇到 Cannot GET /xx
+  - 解决：historyApiFallback: true
+- 目前本机开发命令：
+  - （一个窗口监控md文件的变化）npm run client:monit
+  - （另一个窗口运行webpack-dev-server---热更新）npm run start
+- 线上发布命令：
+  - npm run client:trans && npm run client:prod && pm2 start npm --name 'mmEntMui' -- run dev --watch
+  - 第一次需要使用pm2启动，后面只需要npm run client:trans && npm run client:prod
