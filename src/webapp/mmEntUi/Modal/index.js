@@ -1,7 +1,7 @@
 import React from 'react'
 import {CloseOutlined} from '@ant-design/icons'
 import {Modal} from 'antd'
-import ModalFooter from './../ModalFooter'
+import ModalFooter from './../ModalFooter/index'
 import styles from './index.less'
 
 class MMModal extends React.PureComponent {

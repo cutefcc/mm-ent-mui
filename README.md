@@ -63,3 +63,8 @@
 - 线上发布命令：
   - npm run client:trans && npm run client:prod && pm2 start npm --name 'mmEntMui' -- run dev --watch
   - 第一次需要使用pm2启动，后面只需要npm run client:trans && npm run client:prod
+
+
+- 使用rollup 打包组件遇到的问题：
+  - [!] Error: Could not resolve './Button' from index.js
+    - import Modal from './Modal' ---> import Modal from './Modal/index'

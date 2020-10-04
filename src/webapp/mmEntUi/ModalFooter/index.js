@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from './../Button'
+import Button from './../Button/index'
 import styles from './index.less'
 
 function Footer(props) {
