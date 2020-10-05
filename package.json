@@ -96,6 +96,7 @@
     "karma-chrome-launcher": "^3.1.0",
     "karma-coverage": "^2.0.3",
     "karma-jasmine": "^4.0.1",
+    "karma-phantomjs-launcher": "^1.0.4",
     "koa-router": "^7.4.0",
     "less-loader": "^6.2.0",
     "loader-utils": "^2.0.0",
