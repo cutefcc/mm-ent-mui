@@ -1,5 +1,5 @@
-import * as R from "ramda";
-import urlParse from "url";
+// import * as R from "ramda";
+// import urlParse from "url";
 export const debounce = (fn, tm) => {
   let timer = null;
   return (...argu) => {

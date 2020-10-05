@@ -10,7 +10,8 @@
     "client:trans": "node ./scripts/client/trans.js",
     "client:monit": "node ./scripts/client/monit.js",
     "start": "webpack-dev-server --open",
-    "lint": "eslint ./src/webapp"
+    "lint": "eslint ./src/webapp",
+    "unit": "karma start karma.conf.js"
   },
   "husky": {
     "hooks": {
@@ -90,6 +91,11 @@
     "inversify": "^5.0.1",
     "inversify-binding-decorators": "^4.0.0",
     "inversify-koa-utils": "^1.0.0",
+    "jasmine-core": "^3.6.0",
+    "karma": "^5.2.3",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage": "^2.0.3",
+    "karma-jasmine": "^4.0.1",
     "koa-router": "^7.4.0",
     "less-loader": "^6.2.0",
     "loader-utils": "^2.0.0",

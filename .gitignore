@@ -2,3 +2,4 @@ node_modules
 dist
 pm2Log
 src/webapp/md_trans/*.js
+docs
