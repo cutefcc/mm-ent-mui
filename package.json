@@ -40,6 +40,7 @@
     "koa-swig": "^2.2.1",
     "koa2-connect-history-api-fallback": "^0.1.2",
     "lorem-ipsum": "^2.0.3",
+    "maimai-entui": "^1.0.4",
     "prop-types": "^15.7.2",
     "query-string": "^6.13.1",
     "ramda": "^0.27.1",
@@ -51,6 +52,7 @@
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
     "shelljs": "^0.8.4",
+    "test-cutefcc": "0.0.11",
     "url": "^0.11.0"
   },
   "devDependencies": {

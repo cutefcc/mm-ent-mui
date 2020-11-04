@@ -14,7 +14,7 @@ import {
 } from "@ant-design/icons";
 
 const { SubMenu } = Menu;
-import * as styles from './index.less';
+import * as styles from "./index.less";
 
 @withRouter
 @autobind
@@ -58,16 +58,17 @@ class LeftNav extends React.Component {
           inlineCollapsed={leftNavStatus}
           className={styles.menuUl}
         >
+          <Menu.Item
+            key="2"
+            onClick={() => {
+              this.props.history.push("/");
+              this.handleItemClick("2");
+            }}
+            icon={<DesktopOutlined />}
+          >
+            首页
+          </Menu.Item>
           <SubMenu key="sub1" icon={<PieChartOutlined />} title="UI组件">
-            {/* <Menu.Item
-              key="5"
-              onClick={() => {
-                this.props.history.push("/alreadyEnv");
-                this.handleItemClick("5");
-              }}
-            >
-              已有环境列表
-            </Menu.Item> */}
             <Menu.Item
               key="6"
               onClick={() => {
@@ -75,7 +76,7 @@ class LeftNav extends React.Component {
                 this.handleItemClick("6");
               }}
             >
-              MButton
+              MUI-Button
             </Menu.Item>
             <Menu.Item
               key="7"
@@ -84,7 +85,7 @@ class LeftNav extends React.Component {
                 this.handleItemClick("7");
               }}
             >
-              FeedMultiImg
+              FeedMultiImg(老版)
             </Menu.Item>
             <Menu.Item
               key="8"
@@ -93,7 +94,7 @@ class LeftNav extends React.Component {
                 this.handleItemClick("8");
               }}
             >
-              Empty
+              Empty(老版)
             </Menu.Item>
             <Menu.Item
               key="9"
@@ -102,7 +103,7 @@ class LeftNav extends React.Component {
                 this.handleItemClick("9");
               }}
             >
-              <span title="mockUVE返回数据">ArticleCard</span>
+              <span title="mockUVE返回数据">ArticleCard(老版)</span>
             </Menu.Item>
             <Menu.Item
               key="10"
@@ -111,57 +112,74 @@ class LeftNav extends React.Component {
                 this.handleItemClick("10");
               }}
             >
-              avatar
+              avatar(老版)
             </Menu.Item>
-            {/* <Menu.Item
-              key="11"
-              onClick={() => {
-                this.props.history.push("/avatar");
-                this.handleItemClick("11");
-              }}
-            >
-              avatar
-            </Menu.Item> */}
-            {/* <Menu.Item
+            <Menu.Item
               key="12"
               onClick={() => {
-                this.props.history.push("/MUIButton");
+                this.props.history.push("/oldButton");
                 this.handleItemClick("12");
               }}
             >
-              MUIButton
-            </Menu.Item> */}
+              Button(老版)
+            </Menu.Item>
+            <Menu.Item
+              key="13"
+              onClick={() => {
+                this.props.history.push("/Text");
+                this.handleItemClick("13");
+              }}
+            >
+              文字(老版)
+            </Menu.Item>
+            <Menu.Item
+              key="14"
+              onClick={() => {
+                this.props.history.push("/MUI-Avatar");
+                this.handleItemClick("14");
+              }}
+            >
+              MUI-Avatar
+            </Menu.Item>
+            <Menu.Item
+              key="15"
+              onClick={() => {
+                this.props.history.push("/Loading");
+                this.handleItemClick("15");
+              }}
+            >
+              Loading(老版)
+            </Menu.Item>
+            <Menu.Item
+              key="16"
+              onClick={() => {
+                this.props.history.push("/Icon");
+                this.handleItemClick("16");
+              }}
+            >
+              Icon(老版)
+            </Menu.Item>
+            <Menu.Item
+              key="17"
+              onClick={() => {
+                this.props.history.push("/Tab");
+                this.handleItemClick("17");
+              }}
+            >
+              Tab(老版)
+            </Menu.Item>
           </SubMenu>
-          {/* <Menu.Item
-            key="2"
-            onClick={() => {
-              this.props.history.push("/smartBuild");
-              this.handleItemClick("2");
-            }}
-            icon={<DesktopOutlined />}
-          >
-            智能搭建环境
-          </Menu.Item>
-          <Menu.Item
-            key="3"
-            onClick={() => {
-              this.props.history.push("/newEnv");
-              this.handleItemClick("3");
-            }}
-            icon={<ContainerOutlined />}
-          >
-            新建联调环境
-          </Menu.Item> */}
-          {/* <Menu.Item
-            key="4"
-            onClick={() => {
-              this.props.history.push("/countPage");
-              this.handleItemClick("4");
-            }}
-            icon={<ContainerOutlined />}
-          >
-            统计页面展示
-          </Menu.Item> */}
+          <SubMenu key="sub2" icon={<PieChartOutlined />} title="业务组件">
+            <Menu.Item
+              key="11"
+              onClick={() => {
+                this.props.history.push("/MButton");
+                this.handleItemClick("11");
+              }}
+            >
+              MButton
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </>
     );
