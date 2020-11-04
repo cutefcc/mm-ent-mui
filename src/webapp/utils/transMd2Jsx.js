@@ -4,7 +4,7 @@ const path = require("path");
 const except = require("except");
 const { parse, print } = require("recast");
 const babylon = require("babylon");
-const camelize = require('camelize');
+const camelize = require("camelize");
 // front-matter 把md string转为一个对象（类似于ast）
 /* {
     attributes: {imports: {}},
@@ -31,7 +31,7 @@ module.exports = function (content, item) {
   // console.log('content', content);
   const fm = frontMatter(content);
   // console.log('fm', fm);
-//   const html = md.render(fm.body);
+  //   const html = md.render(fm.body);
   const attributes = fm.attributes;
   let components = [];
   let imports = [];
@@ -62,7 +62,10 @@ module.exports = function (content, item) {
     imports,
   });
 
-  const url = path.resolve(__dirname, `../md_trans/${item.path.split('/')[item.path.split('/').length - 2]}.js`);
+  const url = path.resolve(
+    __dirname,
+    `../md_trans/${item.path.split("/")[item.path.split("/").length - 2]}.js`
+  );
   fs.writeFileSync(url, resultHtml);
 };
 
@@ -205,13 +208,13 @@ function codeBlockTemplate(exampleRun, exampleSrc, langClass, componentName) {
   const code = componentName ? `<${componentName} />` : exampleRun;
   return `
   <div class="example">
-    <div class="run">${code}</div>
-    <div style={{display: 'flex', alignItems: 'center'}} className="seperator">
+    <div class="run" style={{border: '1px solid #D1D3DE', padding: '20px'}}>${code}</div>
+    <div style={{display: 'flex', alignItems: 'center', color: '#f60', marginTop: '10px', marginBottom: '10px'}} className="seperator">
       <span style={{width: '20px', borderBottom: '1px solid #ddd', display: 'inline-block', marginRight: '8px'}}/>
-      <span style={{color: '#333'}}>实例与代码分割线</span>
+      <span style={{color: '#f60'}}>实例与代码分割线</span>
       <span style={{flex: 1, borderBottom: '1px dashed #ddd', display: 'inline-block' , marginLeft: '8px'}}/>
     </div>
-    <div class="source">
+    <div class="source" style={{border: '1px solid #D1D3DE', padding: '20px'}}>
       <pre${!langClass ? "" : ` class="${langClass}"`}><code${
     !langClass ? "" : ` class="${langClass}"`
   }>
