@@ -16,7 +16,7 @@ let webpackConfig = {
   watch: !_modeflag,
   devServer: {
     hot: true,
-    contentBase: './dist',
+    contentBase: "./dist",
     historyApiFallback: true,
   },
   module: {
@@ -42,7 +42,7 @@ let webpackConfig = {
             loader: "css-loader",
             options: {
               modules: true,
-            }
+            },
           },
           {
             loader: "less-loader",
@@ -81,7 +81,7 @@ let webpackConfig = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "脉脉PC-人才银行文档平台",
+      title: "脉脉-PC组件文档平台",
       template: "./src/webapp/index.html", // 模版原始路径
       filename: path.join(__dirname, "/dist/index.html"), // index.html 输出目录
     }),

@@ -10,7 +10,7 @@
     "client:trans": "node ./scripts/client/trans.js",
     "client:monit": "node ./scripts/client/monit.js",
     "start": "webpack-dev-server --open",
-    "lint": "eslint ./src/webapp",
+    "lint": "eslint ./src/webapp/components",
     "unit": "karma start karma.conf.js"
   },
   "husky": {
@@ -89,7 +89,7 @@
     "gulp-watch": "^5.0.1",
     "happypack": "^5.0.1",
     "html-webpack-plugin": "^3.2.0",
-    "husky": "^4.2.5",
+    "husky": "^4.3.0",
     "inversify": "^5.0.1",
     "inversify-binding-decorators": "^4.0.0",
     "inversify-koa-utils": "^1.0.0",

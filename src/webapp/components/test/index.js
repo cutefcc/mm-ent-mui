@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import autobind from "autobind-decorator";
 // import * as actions from "../../store/actions";
-import * as R from "ramda";
+// import * as R from "ramda";
 import { MUIButton } from "test-cutefcc";
 // import "./index.less";
 @withRouter
@@ -17,7 +17,7 @@ class Test extends React.Component {
   }
   render() {
     // const checkedNav = R.pathOr("", ["props", "checkedNav"], this);
-    const leftNavStatus = R.pathOr("", ["props", "leftNavStatus"], this);
+    // const leftNavStatus = R.pathOr("", ["props", "leftNavStatus"], this);
     // const checkedNavObj = R.pathOr({}, ["props", "leftNav"], this).find(
     //   (item) => item.key === checkedNav
     // );

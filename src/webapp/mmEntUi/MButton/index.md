@@ -1,11 +1,11 @@
 ---
 imports:
-  '{Icon, Text, MUIButton}': 'mm-ent-ui'
+  "{Icon, Text, MUIButton}": "mm-ent-ui"
 ---
 
 ## 何时使用
 
-标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑111 test 000
+标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑
 
 ## 引用方式
 
